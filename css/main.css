@@ -1,0 +1,112 @@
+/* Margin and paddings */
+* {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+		vertical-align: baseline;
+}
+
+/* images */
+img, picture, video, iframe, figure {
+		max-width: 100%;
+		width: 100%;
+		display: block;
+		-o-object-fit: cover;
+		   object-fit: cover;
+		-o-object-position: center center;
+		   object-position: center center;
+}
+
+/* links as box */
+a {
+		display: block;
+}
+
+/* links in paragraph */
+p a {
+		display: inline;
+}
+
+/* No decoration in list */
+li {
+		list-style-type: none;
+}
+
+/* Smooth links */
+html {
+		scroll-behavior: smooth;
+}
+
+/* Disable main text tags */
+h1, h2, h3, h4, h5, h6, p, span, strong, blockquote, i, b, u, em {
+		font-size: 1.125rem;
+		font-weight: inherit;
+		font-style: inherit;
+		text-decoration: none;
+		color: inherit;
+}
+
+a {
+		font-size: 16px;
+		font-weight: 400;
+		text-decoration: none;
+		color: inherit;
+}
+
+/* Avoid quotes pseudo elements problems */
+blockquote:before, blockquote:after, q:before, q:after {
+		content: "";
+		content: none;
+}
+
+/* Text select */
+::-moz-selection {
+		background-color: #43a1c3;
+		color: #ff6f42;
+}
+::selection {
+		background-color: #43a1c3;
+		color: #ff6f42;
+}
+
+/* Form typography */
+form, input, textarea, select, button, label {
+		font-family: inherit;
+		font-size: inherit;
+		-webkit-hyphens: auto;
+		    -ms-hyphens: auto;
+		        hyphens: auto;
+		background-color: transparent;
+		display: block;
+		color: inherit;
+}
+
+/* Tables */
+table, td, tr {
+		border-collapse: collapse;
+		border-spacing: 0;
+}
+
+/* Avoid SVG problems */
+svg {
+		width: 100%;
+		display: block;
+		fill: currentColor;
+}
+
+/* Text entrire web */
+body {
+		font-size: 100%;
+		font-family: "Space Grotesk", sans-serif;
+		color: #43a1c3;
+		background-color: #fff7ed;
+		font-smooth: always;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: antialiased;
+}
+
+body {
+		background-color: #43a1c3;
+}
