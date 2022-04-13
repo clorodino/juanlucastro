@@ -1,5 +1,30 @@
 @import 'colors', 'fonts', 'reset', 'responsive', 'auxiliar', 'mixins';
 
+/* GENERAL STYLES */
+
 body {
     background-color: $primary;
 }
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: $secondary;
+} 
+
+h1 {
+    font-size: 3rem;
+}
+
+.terminal-font {
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+.about__text-content {
+    p {
+        white-space: pre-line;
+    }
+}
+
+
