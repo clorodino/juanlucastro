@@ -7,6 +7,7 @@
     <title>Juanlu Castro | Front End Developer </title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/e5612c4556.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js" defer></script>
@@ -28,7 +29,7 @@
                     loop autoplay
                     ></lottie-player>
             </div>
-            <div id="header__menu" class="header__menu">
+            <div class="header__menu">
                 <ul>
                     <div class="mask"><li><a href="#projects">Projects</a></li></div>
                     <div class="mask"><li><a href="#about">About</a></li></div>
@@ -36,7 +37,8 @@
                 </ul>
             </div>
             <div class="header__menu--toggle">
-                <i id="toggleBtn" class="fa-solid fa-bars"></i>
+                <!-- <i id="toggleBtn" class="fa-solid fa-bars"></i> -->
+                <lottie-player class="burger" src="./assets/img/burger.json" background="transparent" speed="1"></lottie-player>
             </div>
             
         </nav>
@@ -60,7 +62,6 @@
                 </div>
             </div>
         </div>
-        <div class="next"></div>
     </section>
 
     <!-- FRONT-END -->
@@ -81,7 +82,6 @@
                 <span class="cursor">⎕</span>
             </h2>
         </div>
-        <div class="next"></div>
     </section>
 
     <!-- DESIGN -->
@@ -123,7 +123,6 @@
                 <div class="circle03 circle"></div>
             </div>
         </div>
-        <div class="next"></div>
     </section>
 
     <!-- ANIMATION -->
@@ -141,7 +140,6 @@
             </div>
             <!-- Eye Animation -->
         </div>
-        <div class="next"></div>
     </section>
 
     <!-- DETAILS -->
@@ -163,7 +161,7 @@
 
     <!-- PROJECTS -->
 
-    <section class="projects section-content">
+    <section id="projects" class="projects section-content">
         <div class="projects__content">
             <h1 class="projects__title title">Last Projects</h1>
             <div class="projects__cards swiper mySwiper">
@@ -198,14 +196,13 @@
                     </div>
                 </div>
                 <div class="swiper-scrollbar"></div>
-            
             </div>
         </div>
     </section>
 
     <!-- ABOUT -->
 
-    <section class="about">
+    <section id="about" class="about">
         <div class="about__content">
             <h1 class="about__title title">About</h1>
             <div class="about__text-content">
@@ -220,7 +217,9 @@
                     <img src="./assets/img/about-illustration.svg" alt="">
                 </div>
             </div>
-            <a href="./assets/Juanlu Castro - CV.pdf" target="'blank" class="button-secondary">Download resume</a>
+            <div class="about__download-cv">
+                <a href="./assets/Juanlu Castro - CV.pdf" target="'blank" class="button-secondary">Download resume</a>
+            </div>
         </div>
         <div class="about__technologies">
             <ul class="tech-list">
@@ -260,7 +259,7 @@
     
     <!-- CONTACT -->
 
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="contact__content">
             <div class="contact__illustration">
                 <img src="./assets/img/point_face.svg" alt="">

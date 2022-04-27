@@ -176,6 +176,13 @@ body {
   transition: ease-out 0.5s;
 }
 
+@media (max-width: 768px) {
+  .button-primary {
+    font-size: 1rem;
+    padding: 0.8rem 3.5rem;
+  }
+}
+
 .button-primary:hover {
   background-color: #343434;
   color: #fff7ed;
@@ -199,6 +206,13 @@ body {
   transition: ease-out 0.5s;
 }
 
+@media (max-width: 768px) {
+  .button-secondary {
+    font-size: 1rem;
+    padding: 0.8rem 3.5rem;
+  }
+}
+
 .button-secondary:hover {
   background-color: #ff6f42;
   -webkit-transform: translate(0, -0.2rem);
@@ -217,6 +231,12 @@ body {
   font-size: 20px;
   -webkit-transition: ease-out 0.5s;
   transition: ease-out 0.5s;
+}
+
+@media (max-width: 768px) {
+  .button-link {
+    font-size: 1rem;
+  }
 }
 
 .button-link:hover {
@@ -289,11 +309,15 @@ header nav .header__menu--toggle {
     padding: 1.875rem 1.875rem;
   }
   header nav .header__menu {
-    background-color: grey;
+    background-color: #343434;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    -webkit-transition: -webkit-transform color ease-in-out 0.5s;
+    transition: -webkit-transform color ease-in-out 0.5s;
+    transition: transform color ease-in-out 0.5s;
+    transition: transform color ease-in-out 0.5s, -webkit-transform color ease-in-out 0.5s;
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
@@ -316,10 +340,23 @@ header nav .header__menu--toggle {
     font-size: 3.2rem;
     line-height: 5rem;
     font-weight: 700;
+    -webkit-transition: font-size ease-out 0.3s;
+    transition: font-size ease-out 0.3s;
+  }
+  header nav .header__menu ul li a:hover {
+    font-size: 3.8rem;
+    color: #43a1c3;
+  }
+  header nav .header__menu--show {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   header nav .header__menu--toggle {
     display: block;
     cursor: pointer;
+    width: 3rem;
+    height: 1.8rem;
+    margin-top: 0.625rem;
   }
 }
 
@@ -433,7 +470,7 @@ header nav .header__menu--toggle {
 
 @media (max-width: 768px) {
   .front-end__content {
-    margin: 10rem 2rem 10rem;
+    margin: auto 2rem;
     padding: 1rem;
   }
   .front-end__content h2 {
@@ -656,6 +693,12 @@ header nav .header__menu--toggle {
           justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  .projects .projects__content .projects__cards .card {
+    padding: 2.5rem;
+  }
+}
+
 .projects .projects__content .projects__cards .buttons-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -668,9 +711,24 @@ header nav .header__menu--toggle {
           justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  .projects .projects__content .projects__cards .buttons-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects .projects__content .projects__cards .buttons-content a {
+    margin-top: 1.875rem;
+  }
+}
+
 .projects .projects__content .projects__cards p {
   font-weight: 500;
-  font-size: 26px;
+  font-size: 1.625rem;
   line-height: 130%;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -678,14 +736,41 @@ header nav .header__menu--toggle {
           user-select: none;
 }
 
+@media (max-width: 768px) {
+  .projects .projects__content .projects__cards p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects .projects__content {
+    padding: 6rem 2rem 4rem;
+  }
+  .projects .projects__content h1 {
+    font-size: 2.5rem;
+  }
+}
+
 .projects .swiper {
   width: 100%;
-  height: 80%;
+  height: 83%;
+}
+
+@media (max-width: 768px) {
+  .projects .swiper {
+    height: 100%;
+  }
 }
 
 .projects .swiper-horizontal > .swiper-scrollbar {
   width: 87%;
   left: 0;
+}
+
+@media (max-width: 768px) {
+  .projects .swiper-horizontal > .swiper-scrollbar {
+    width: 100%;
+  }
 }
 
 .projects .swiper-scrollbar-drag {
@@ -699,14 +784,26 @@ header nav .header__menu--toggle {
   border-radius: 25px;
 }
 
+@media (max-width: 768px) {
+  .projects .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects .swiper-wrapper {
+    height: 68vh;
+  }
+}
+
 /* ABOUT */
 .about .about__content {
   background-color: #fff7ed;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 8rem 8rem;
+  padding: 8rem 8rem 4rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -722,25 +819,70 @@ header nav .header__menu--toggle {
           align-items: center;
 }
 
+@media (max-width: 768px) {
+  .about .about__content .about__text-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .about .about__content p {
   width: 70%;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 1.625rem;
   line-height: 130%;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   padding-right: 2rem;
+  width: 100%;
 }
 
-.about .about__content img {
+@media (max-width: 768px) {
+  .about .about__content p {
+    padding-right: 0;
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.about .about__content .about__illustration img {
   width: 16.25rem;
 }
 
+@media (max-width: 768px) {
+  .about .about__content .about__illustration {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about .about__content .about__illustration img {
+    width: 10rem;
+  }
+}
+
 .about .about__content .button-secondary {
-  width: 20rem;
-  margin-top: 2.5rem;
+  width: 15.5rem;
+  margin: 2.5rem auto 0;
+}
+
+@media (max-width: 768px) {
+  .about .about__content {
+    padding: 2rem 2rem 4rem;
+  }
+  .about .about__content h1 {
+    font-size: 2.5rem;
+  }
 }
 
 .about .about__technologies {
@@ -759,6 +901,13 @@ header nav .header__menu--toggle {
 .about .about__technologies li {
   display: inline;
   margin-right: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .about .about__technologies {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+  }
 }
 
 .contact {
