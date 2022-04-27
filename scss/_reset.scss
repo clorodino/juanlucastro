@@ -46,13 +46,13 @@ html {
 
 /* Disable main text tags */
 
-h1, h2, h3, h4, h5, h6, p, span, strong, blockquote, i, b, u, em {
-    font-size: 1.125rem;
-    font-weight: inherit;
-    font-style: inherit;
-    text-decoration: none;
-    color: inherit;
-}
+// h1, h2, h3, h4, h5, h6, p, span, strong, blockquote, i, b, u, em {
+//     //font-size: 1.125rem;
+//     font-weight: inherit;
+//     //font-style: inherit;
+//     text-decoration: none;
+//     //color: inherit;
+// }
 
 a {
     font-size: 16px;
@@ -77,7 +77,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 /* Form typography */
 
-form, input, textarea, select, button, label {
+form, input, textarea, select, label {
     font-family: inherit;
     font-size: inherit;
     hyphens: auto;

@@ -6,39 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juanlu Castro | Front End Developer </title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/e5612c4556.js" crossorigin="anonymous"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
-   <script defer type='module' src="./js/animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EasePack.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer type='module' src="./js/animation.js"></script>
+    <script defer type='module' src="./js/script.js"></script>
 </head>
 <body>
 
     <!-- HEADER -->
 
-    <header>
-       <div class="logo">logo</div>
-       <div class="menu">
-           <ul>
-               <li>Projects</li>
-               <li>About</li>
-               <li>Contact</li>
-           </ul>
-       </div>
+    <header class="header">
+        <nav>
+            <div class="header__logo">
+                <lottie-player src="./assets/img/jc_logo.json" background="transparent" speed="1"
+                    loop autoplay
+                    ></lottie-player>
+            </div>
+            <div id="header__menu" class="header__menu">
+                <ul>
+                    <div class="mask"><li><a href="#projects">Projects</a></li></div>
+                    <div class="mask"><li><a href="#about">About</a></li></div>
+                    <div class="mask"><li><a href="#contact">Contact</a></li></div>
+                </ul>
+            </div>
+            <div class="header__menu--toggle">
+                <i id="toggleBtn" class="fa-solid fa-bars"></i>
+            </div>
+            
+        </nav>
     </header>
 
     <!-- HOME -->
 
-    <section class="home">
+    <section class="home section-content">
         <div class="home__content">
-            <div class="home__ilustration"></div>
+            <div class="home__illustration">
+                <img src="./assets/img/face_illustration.svg" alt="face">
+            </div>
             <div class="home__title">
-                <h1 class="mask">
-                    <span>Hi!</span>
-                </h1>
-                <h1 class="mask">
-                    <span>I'm</span>
+                <h2 class="mask">
+                    Hi!
+                </h2>
+                <div class="mix-line mask">
+                    <h2>I'm</h2>
                     <span class="underline"></span>
-                    <span>Juanlu</span>
-                </h1>
+                    <h1>Juanlu</h1>
+                </div>
             </div>
         </div>
         <div class="next"></div>
@@ -46,34 +65,38 @@
 
     <!-- FRONT-END -->
 
-    <section class="front-end">
+    <section class="front-end section-content">
         <div class="front-end__content">
             <div class="front-end__buttons">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li class="button-close"></li>
+                    <li class="button-minimize"></li>
+                    <li class="button-maximize"></li>
                 </ul>
             </div>
-            <h2 class="front-end__info">Last login: Mon Mar 21 08:08:31 on console</h2>
-            <h1 class="front-end__title">$ <span>I'm a Front End Developer_</span></h1>
+            <h2 class="front-end__info">Last login: <span id="time"></span> on console</h2>
+            <h2 class="front-end__title">
+                $
+                <span class="typewriter"></span>
+                <span class="cursor">⎕</span>
+            </h2>
         </div>
         <div class="next"></div>
     </section>
 
     <!-- DESIGN -->
 
-    <section class="design">
+    <section class="design section-content">
         <div class="design__content">
             <div class="design__title">
-                <h1 class="mask">
+                <h2 class="mask">
                     <span>with strong</span>
-                </h1>
-                <h1 class="mask">
+                </h2>
+                <div class="mix-line mask">
                     <span class="underline"></span>
-                    <span>design</span>
-                    <span>skills</span>
-                </h1>
+                    <h1>design</h1>
+                    <h2>skills</h2>
+                </div>
             </div>
             <div class="boxes-mask">
                 <div class="box1"></div>
@@ -105,16 +128,16 @@
 
     <!-- ANIMATION -->
 
-    <section class="animation">
-        <div class="animation_content">
+    <section class="animation section-content">
+        <div class="animation__content">
             <div class="animation__title">
-                <h1 class="mask">
+                <h2 class="mask">
                     <span>I love</span>
-                </h1>
-                <h1 class="mask">
+                </h2>
+                <div class="mix-line mask">
                     <span class="underline"></span>
-                    <span>animation</span>
-                </h1>
+                    <h1>animation</h1>
+                </div>
             </div>
             <!-- Eye Animation -->
         </div>
@@ -123,41 +146,59 @@
 
     <!-- DETAILS -->
 
-    <section class="details">
-        <div class="details__title">
-            <h1 class="mask">
-                <span>and</span>
-                <span class="underline"></span>
-                <span>details</span>
-                <span>
-                    <svg></svg>
-                </span>
-            </h1>
+    <section class="details section-content">
+        <div class="details__content">
+            <div class="details__title">
+                <div class="mix-line mask">
+                    <h2>and</h2>
+                    <span class="underline"></span>
+                    <h1>details</h1>
+                    <span>
+                        <img src="./assets/img/point_face.svg" alt="face">
+                    </span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- PROJECTS -->
 
-    <section class="projects">
+    <section class="projects section-content">
         <div class="projects__content">
-            <h1>Last Projects</h1>
-            <div class="projects__cards">
-                <div class="card">
-                    <div class="button-link">View in GitHub</div>
-                    <div class="button-primary">Live demo</div>
+            <h1 class="projects__title title">Last Projects</h1>
+            <div class="projects__cards swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="card swiper-slide bg-secondary">
+                        <p><span class="bold">Graf Cómic</span> scelerisque velit non ornare at ultrices. Nisl id eget ac imperdiet odio ut vestibulum nunc. Justo, nisl quis nisi, donec. Quam sagittis, ipsum, in volutpat placerat varius ornare. Dui ac commodo quis morbi ut ut augue consectetur. </p>
+                        <div class="buttons-content">
+                            <a href="https://github.com/clorodino/graf-app" target="blank" class="button-link">View in GitHub</a>
+                            <a href="https://graf-next.vercel.app/" target="blank" class="button-primary">Live demo</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide bg-terciary">
+                        <p><span class="bold">What the food!</span> dolor sit amet, consectetur adipiscing elit. Ac feugiat pulvinar id blandit amet, sit. Scelerisque velit non ornare at ultrices. Nisl id eget ac imperdiet odio ut vestibulum nunc. Justo, nisl quis nisi, donec. Quam sagittis, ipsum, in volutpat placerat varius ornare. Dui ac commodo quis morbi ut ut augue consectetur.  </p>
+                        <div class="buttons-content">
+                            <a href="https://github.com/giofagi-corp/what-the-food-frontend" target="blank" class="button-link">View in GitHub</a>
+                            <a href="https://whatthefood-app.herokuapp.com/login" target="blank" class="button-primary">Live demo</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide bg-primary">
+                        <p><span class="bold">Duga</span> adipiscing elit. Ac feugiat pulvinar id blandit amet, sit. Scelerisque velit non ornare at ultrices. Nisl id eget ac imperdiet odio ut vestibulum nunc. Justo, nisl quis nisi, donec. Quam sagittis, ipsum, in volutpat placerat varius ornare. Dui ac commodo quis. </p>
+                        <div class="buttons-content">
+                            <a href="https://github.com/project-duga/duga-app" target="blank" class="button-link">View in GitHub</a>
+                            <a href="https://duga-app.herokuapp.com/" target="blank" class="button-primary">Live demo</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide bg-secondary">
+                        <p><span class="bold">Pizza Party</span> scelerisque velit non ornare at ultrices. Nisl id eget ac imperdiet odio ut vestibulum nunc. Justo, nisl quis nisi, donec. Quam sagittis, ipsum, in volutpat placerat varius ornare. Dui ac commodo quis morbi ut ut augue consectetur. </p>
+                        <div class="buttons-content">
+                            <a href="https://github.com/clorodino/pizza_party" target="blank" class="button-link">View in GitHub</a>
+                            <a href="https://clorodino.github.io/pizza_party/" target="blank" class="button-primary">Live demo</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="button-link">View in GitHub</div>
-                    <div class="button-primary">Live demo</div>
-                </div>
-                <div class="card">
-                    <div class="button-link">View in GitHub</div>
-                    <div class="button-primary">Live demo</div>
-                </div>
-                <div class="card">
-                    <div class="button-link">View in GitHub</div>
-                    <div class="button-primary">Live demo</div>
-                </div>
+                <div class="swiper-scrollbar"></div>
+            
             </div>
         </div>
     </section>
@@ -166,7 +207,7 @@
 
     <section class="about">
         <div class="about__content">
-            <h1 class="about__title">About</h1>
+            <h1 class="about__title title">About</h1>
             <div class="about__text-content">
                 <p>
                     I'm an ex-marketer who loves building things with code.
@@ -175,45 +216,45 @@
                     But, then Covid hit and suddenly I had more time without my commute. So, I started learning again. Specifically, I learned web development, as I had things I wanted to build for myself.
                     After a few months of self-teaching, I knew this was what I wanted to do for my career. So, I signed up for the coder academy Bootcamp and put my heart and soul into it.
                 </p>
-                    <div class="about__illustration">
-                        <svg></svg>
-                    </div>
+                <div class="about__illustration">
+                    <img src="./assets/img/about-illustration.svg" alt="">
+                </div>
             </div>
-            <div class="button-primary">Download resume</div>
+            <a href="./assets/Juanlu Castro - CV.pdf" target="'blank" class="button-secondary">Download resume</a>
         </div>
         <div class="about__technologies">
-            <span>
-                <span>Html5</span>
-                <span>•</span>
-                <span>Css3</span>
-                <span>•</span>
-                <span>JavaScript</span>
-                <span>•</span>
-                <span>React</span>
-                <span>•</span>
-                <span>TypeScript</span>
-                <span>•</span>
-                <span>Next js</span>
-                <span>•</span>
-                <span>Sass</span>
-                <span>•</span>
-                <span>Tailwind</span>
-                <span>•</span>
-                <span>Gsap</span>
-                <span>•</span>
-                <span>Node js</span>
-                <span>•</span>
-                <span>Express js</span>
-                <span>•</span>
-                <span>MongoDb</span>
-                <span>•</span>
-                <span>React Native</span>
-                <span>•</span>
-                <span>Wordpress</span>
-                <span>•</span>
-                <span>Figma</span>
-                <span>•</span>
-              </span>
+            <ul class="tech-list">
+                <li>Html5</li>
+                <li>•</li>
+                <li>Css3</li>
+                <li>•</li>
+                <li>JavaScript</li>
+                <li>•</li>
+                <li>React</li>
+                <li>•</li>
+                <li>TypeScript</li>
+                <li>•</li>
+                <li>Next js</li>
+                <li>•</li>
+                <li>Sass</li>
+                <li>•</li>
+                <li>Tailwind</li>
+                <li>•</li>
+                <li>Gsap</li>
+                <li>•</li>
+                <li>Node js</li>
+                <li>•</li>
+                <li>Express js</li>
+                <li>•</li>
+                <li>MongoDb</li>
+                <li>•</li>
+                <li>React Native</li>
+                <li>•</li>
+                <li>Wordpress</li>
+                <li>•</li>
+                <li>Figma</li>
+                <li>•</li>
+            </ul>
         </div>
     </section>
     
@@ -222,22 +263,20 @@
     <section class="contact">
         <div class="contact__content">
             <div class="contact__illustration">
-                <svg></svg>
+                <img src="./assets/img/point_face.svg" alt="">
             </div>
             <div class="contact__title">
-                <h1 class="mask">
-                    <span>If you need me,</span>
-                </h1>
-                <h1 class="mask">
-                    <span>don't be shy,</span>
-                </h1>
-                <h1 class="mask">
-                    <span>drop me an</span>
+                <h2 class="mask">If you need me,</h2>
+                <h2 class="mask">don't be shy,</h2>
+                <div class="mix-line mask">
+                    <h2>drop me an</h2>
                     <span class="underline"></span>
-                    <span>e-mail</span>
-                </h1>
+                    <a href="mailto:juanluiscas@gmail.com"><h1>e-mail</h1></a>
+                </div>
+
             </div>
         </div>
+        <div class="contact__gradient"></div>
     </section>
 
     <!-- FOOTER -->
@@ -246,9 +285,9 @@
         <div class="footer__copyright">Copyright © 2021 Juan Luis Castro</div>
         <div class="footer__social">
             <ul>
-                <li><i class="fa-brands fa-github"></i></li>
-                <li><i class="fa-brands fa-linkedin"></i></li>
-                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><a href="http://github.com/clorodino"> <i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/juanluiscastromaldonado/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://www.instagram.com/clorodino"><i class="fa-brands fa-instagram"></i></a></li>
             </ul>
         </div>
     </footer>
