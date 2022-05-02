@@ -14,6 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EasePack.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.3/lottie.min.js" integrity="sha512-e0f5QhAghpnR7F96ocZHSXHNrM1ugw32mmQJsKg02ADeVj7uxFkG5UA+HgrcTTxcPWp415lH+1l1b4nZtyqnsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script defer type='module' src="./js/animation.js"></script>
     <script defer type='module' src="./js/script.js"></script>
@@ -25,9 +26,11 @@
     <header class="header">
         <nav>
             <div class="header__logo">
-                <lottie-player src="./assets/img/jc_logo.json" background="transparent" speed="1"
-                    loop autoplay
-                    ></lottie-player>
+                <a href="#home">
+                    <lottie-player src="./assets/img/jc_logo.json" background="transparent" speed="1"
+                        loop autoplay
+                        ></lottie-player>
+                </a>
             </div>
             <div class="header__menu">
                 <ul>
@@ -46,20 +49,24 @@
 
     <!-- HOME -->
 
-    <section class="home section-content">
+    <section id="home" class="home section-content">
         <div class="home__content">
             <div class="home__illustration">
                 <img src="./assets/img/face_illustration.svg" alt="face">
             </div>
             <div class="home__title">
                 <h2 class="mask">
-                    Hi!
+                    <span class="home__title--text-01">
+                        Hi!
+                    </span>
                 </h2>
-                <div class="mix-line mask">
-                    <h2>I'm</h2>
-                    <span class="underline"></span>
-                    <h1>Juanlu</h1>
-                </div>
+                <h2 class="mix-line mask">
+                    <span class="home__title--text-02">I'm</span>
+                    <div class="bolder">
+                        <span class="home__title--underline"></span>
+                        <span class="home__title--text-03">Juanlu</span>
+                    </div>
+                </h2>
             </div>
         </div>
     </section>
@@ -90,13 +97,15 @@
         <div class="design__content">
             <div class="design__title">
                 <h2 class="mask">
-                    <span>with strong</span>
+                    <span class="design__title--text-01">with strong</span>
                 </h2>
-                <div class="mix-line mask">
-                    <span class="underline"></span>
-                    <h1>design</h1>
-                    <h2>skills</h2>
-                </div>
+                <h2 class="mix-line mask">
+                    <div class="bolder">
+                        <span class="design__title--underline"></span>
+                        <span class="design__title--text-02">design </span>
+                    </div>
+                    <span class="design__title--text-03">skills</span>
+                </h2>
             </div>
             <div class="boxes-mask">
                 <div class="box1"></div>
@@ -129,14 +138,22 @@
 
     <section class="animation section-content">
         <div class="animation__content">
+            <div class="animation__lottie">
+                <!-- <lottie-player src="./assets/img/animation-animation.json" background="transparent" speed="1" autoplay></lottie-player> -->
+                <div class="animation__lottie--container"></div>
+
+
+            </div>
             <div class="animation__title">
                 <h2 class="mask">
-                    <span>I love</span>
+                    <span class="animation__title--text-01">an eye for</span>
                 </h2>
-                <div class="mix-line mask">
-                    <span class="underline"></span>
-                    <h1>animation</h1>
-                </div>
+                <h2 class="mix-line mask">
+                    <div class="bolder">
+                        <span class="animation__title--underline"></span>
+                        <span class="animation__title--text-02">animation</span>
+                    </div>
+                </h2>
             </div>
             <!-- Eye Animation -->
         </div>
@@ -147,14 +164,14 @@
     <section class="details section-content">
         <div class="details__content">
             <div class="details__title">
-                <div class="mix-line mask">
-                    <h2>and</h2>
-                    <span class="underline"></span>
-                    <h1>details</h1>
-                    <span>
-                        <img src="./assets/img/point_face.svg" alt="face">
-                    </span>
-                </div>
+                <h2 class="mix-line mask">
+                    <span class="details__title--text-01">and </span>
+                    <div class="bolder">
+                        <span class="details__title--underline"></span>
+                        <span class="details__title--text-02">details</span>
+                    </div>
+                    <span class="details__title--point"><img src="./assets/img/point_face.svg" alt="face"></span>
+                </h2>
             </div>
         </div>
     </section>
@@ -207,10 +224,10 @@
             <h1 class="about__title title">About</h1>
             <div class="about__text-content">
                 <p>
-                    I'm an ex-marketer who loves building things with code.
-                    I first became enthralled with programming in 2015. I was in San Francisco with my brother in law and he was telling me about this thing called Python and how it could automate things. As a person who looks for efficiencies, I was hooked.
-                    I jumped right into Python on my flight back to Australia. Soon, I was automating my own things. I made a bot to book classes at the gym, one to send weekly reports to my boss and I even made one to like my girlfriend's content on Instagram. Unfortunately, that is as far as it went. Shortly after, I got promoted. So, I had less time to learn and I let programming fall by the wayside.
-                    But, then Covid hit and suddenly I had more time without my commute. So, I started learning again. Specifically, I learned web development, as I had things I wanted to build for myself.
+                    I'm an ex-marketer who loves building things with code. <br>
+                    I first became enthralled with programming in 2015. I was in San Francisco with my brother in law and he was telling me about this thing called Python and how it could automate things. As a person who looks for efficiencies, I was hooked.<br>
+                    I jumped right into Python on my flight back to Australia. Soon, I was automating my own things. I made a bot to book classes at the gym, one to send weekly reports to my boss and I even made one to like my girlfriend's content on Instagram. Unfortunately, that is as far as it went. Shortly after, I got promoted. So, I had less time to learn and I let programming fall by the wayside.<br>
+                    But, then Covid hit and suddenly I had more time without my commute. So, I started learning again. Specifically, I learned web development, as I had things I wanted to build for myself.<br>
                     After a few months of self-teaching, I knew this was what I wanted to do for my career. So, I signed up for the coder academy Bootcamp and put my heart and soul into it.
                 </p>
                 <div class="about__illustration">
@@ -265,13 +282,25 @@
                 <img src="./assets/img/point_face.svg" alt="">
             </div>
             <div class="contact__title">
-                <h2 class="mask">If you need me,</h2>
-                <h2 class="mask">don't be shy,</h2>
-                <div class="mix-line mask">
-                    <h2>drop me an</h2>
-                    <span class="underline"></span>
-                    <a href="mailto:juanluiscas@gmail.com"><h1>e-mail</h1></a>
-                </div>
+                <h2 class="mask">
+                    <span class="contact__title--text-01">
+                        If you need me,
+                    </span>
+                </h2>
+                <h2 class="mask">
+                    <span class="contact__title--text-02">
+                        don't be shy,
+                    </span>
+                </h2>
+                <h2 class="mix-line mask">
+                    <div class="mask">
+                        <span class="contact__title--text-03">drop me an </span>
+                    </div>
+                    <div class="bolder">
+                        <span class="contact__title--underline"></span>
+                        <a href="mailto:juanluiscas@gmail.com"><span class="contact__title--text-04">e-mail</span></a>
+                    </div>
+                </h2>
 
             </div>
         </div>

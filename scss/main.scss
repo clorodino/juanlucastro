@@ -8,7 +8,10 @@ body {
 
 .section-content {
     height: 100vh;
-    overflow: hidden
+    overflow: hidden;
+
+    //
+    //border: solid 1px red;
 }
 
 .mask {
@@ -44,7 +47,7 @@ body {
     padding: 0.8rem 4.5rem;
     transition: ease-out 0.5s;
 
-    @include md {
+    @include sm {
         font-size: 1rem;
         padding: 0.8rem 3.5rem;
     }
@@ -67,7 +70,7 @@ body {
     padding: 0.8rem 4.5rem;
     transition: ease-out 0.5s;
 
-    @include md {
+    @include sm {
         font-size: 1rem;
         padding: 0.8rem 3.5rem;
     }
@@ -87,7 +90,7 @@ body {
     font-size: 20px;
     transition: ease-out 0.5s;
 
-    @include md {
+    @include sm {
         font-size: 1rem;
     }
 }
@@ -219,34 +222,39 @@ header {
     align-items: center;
     position:relative;
     z-index: -2;
+    
+    .home__title--text-01{
+        display: block;
+    }
+    
+    .home__title--text-02{
+        display: block;
+        margin-right: 1vh;
+    }
 
-    h1 {
-        display: inline;
-        padding-left: 1rem;
+    .home__title--text-03 {
+        display: block;
         font-size: 7vh;
+        font-weight: 900;
     }
 
-    h2 {
-        font-size: 5vh;
-    }
-
-    .underline {
-        background-color: $terciary;
-        width: 21.5vh;
-        margin-left: 1rem;
+    .home__title--underline {
+        @include underline;
+        background-color: $secondary;
+        width: 0;
+       // margin-left: 1rem;
         position: absolute;
         display: inline-block;
         top: 7.1vh;
     }
 
     .mix-line {
-        display: inline-block;
+        display: flex;
         position: relative;
-        margin-top: -1.4rem;
+        margin-top: -1.5vh;
+        align-items: baseline;
+        // width: 500px;
 
-        h2 {
-            display: inline;
-        }
     }
 
 }
@@ -297,6 +305,7 @@ header {
     h2 {
         font-family: 'Roboto Mono', monospace;
         font-size: 3rem;
+        font-weight: 400;
     }
 
     @include md {
@@ -307,6 +316,12 @@ header {
             font-size: 2rem;
         }
     }  
+
+    @include sm {
+        h2 {
+            font-size: 1.6rem;
+        }
+    }
 }
 
 .front-end__buttons {
@@ -352,28 +367,35 @@ header {
         z-index: 10;
         top: 50%;
         
-        .underline {
-            background-color: $primary;
-            width: 16.5vh;
-            margin-left: 0rem;
-            position: absolute;
-            display: inline-block;
-            top: 5.5vh;
-            z-index: 9;
+        .design__title--text-01{
+            display: block;
+        }
+        
+        .design__title--text-02 {
+            display: block;
+            font-size: 7vh;
+            font-weight: 900;
+        }
+
+        .design__title--text-03{
+            display: block;
+            margin-left: 1vh;
         }
     
-        .mix-line {
+        .design__title--underline {
+            @include underline;
+            background-color: $primary;
+            width: 0;
+            position: absolute;
             display: inline-block;
+            top: 7vh;
+            z-index: -1;
+        }
+        .mix-line {
+            display: flex;
             position: relative;
-            margin-top: -1.4rem;
-    
-            h1 {
-                display: inline;
-            }
-    
-            h2 {
-                display: inline;
-            }
+            margin-top: -1.5vh;
+            align-items: baseline;
         }
     }
 }
@@ -395,32 +417,76 @@ header {
         height: 100vh;
         display: flex;
         justify-content: center;
+        align-items: center;
+
+        @include md {
+            flex-direction: column-reverse;
+            padding: 10vh 0 0;
+            //justify-content: space-around;
+        }
     
+    }
+
+    .animation__lottie {
+        width: 55vh;
+
+        @include md {
+            width: 40vh;
+        }
+    }
+
+    .animation__lottie--container{
+        width: 55vh;
+        // background-color: tomato;
+        // height: 100px;
+
+        @include md {
+            width: 40vh;
+        }
     }
     
     .animation__title {
-        position: relative;
+        //position: relative;
+        margin-right: 5vh;
         z-index: 10;
         top: 50%;
         color: $white;
+
+        @include md {
+            margin-right: 0;
+        }
         
-        .underline {
+        .animation__title--text-01{
+            display: block;
+        }
+        
+        .animation__title--text-02 {
+            display: block;
+            font-size: 7vh;
+            font-weight: 900;
+        }
+
+        .animation__title--underline {
+            @include underline;
             background-color: $terciary;
-            width: 24.5vh;
+            width: 0;
             margin-left: 0rem;
             position: absolute;
             display: inline-block;
-            top: 5.5vh;
+            top: 7vh;
             z-index: 9;
         }
     
         .mix-line {
-            display: inline-block;
+            display: flex;
             position: relative;
-            margin-top: -1.4rem;
+            // margin-top: -1.4rem;
+            margin-top: -1.5vh;
     
             h1 {
                 display: inline;
+                position: relative;
+                z-index: 10;
             }
     
             h2 {
@@ -446,29 +512,34 @@ header {
         z-index: 10;
         top: 50%;
         color: $black;
+
+        .details__title--text-01{
+            display: block;
+            margin-right: 1vh;
+        }
         
-        .underline {
+        .details__title--text-02 {
+            display: block;
+            font-size: 7vh;
+            font-weight: 900;
+        }
+        
+        .details__title--underline {
+            @include underline;
             background-color: $secondary;
-            width: 16.5vh;
+            width: 0;
             margin-left: 0rem;
             position: absolute;
             display: inline-block;
-            top: 5.5vh;
+            top: 7vh;
             z-index: 9;
         }
     
         .mix-line {
-            display: inline-block;
+            display: flex;
             position: relative;
-            margin-top: -1.4rem;
-    
-            h1 {
-                display: inline;
-            }
-    
-            h2 {
-                display: inline;
-            }
+            margin-top: -1.5vh;
+            align-items: baseline;
 
             img {
                 width: 0.8vh;
@@ -500,7 +571,7 @@ header {
                 flex-direction: column;
                 justify-content:space-between;
 
-                @include md {
+                @include sm {
                     padding: 2.5rem;
                 }
             }
@@ -510,12 +581,19 @@ header {
                 justify-content: space-between;
 
                 @include md {
-                    flex-direction: column-reverse;
+                    justify-content: center;
+                    flex-wrap: wrap-reverse;
+
+                    a {
+                        margin: 0.625rem 1.2rem;
+                    }
                 }
 
-                a {
-                    @include md {
-                        margin-top: 1.875rem;
+                @include sm {
+                    flex-direction: column-reverse;
+    
+                    a {
+                        margin: 0.625rem 0.625rem;
                     }
                 }
                 
@@ -527,7 +605,7 @@ header {
                 line-height: 130%;
                 user-select: none;
 
-                @include md {
+                @include sm {
                     font-size: 1.2rem;
                 }
             }
@@ -547,6 +625,10 @@ header {
         height: 83%;
 
         @include md {
+            height: 73%;
+        }
+
+        @include sm {
             height: 100%;
         }
     }
@@ -555,7 +637,7 @@ header {
         width: 87%;
         left: 0;
 
-        @include md {
+        @include sm {
             width: 100%;
             
         }
@@ -574,10 +656,19 @@ header {
             width: 100%;
             height: 100%;
         }
+
+        @include sm {
+            width: 100%;
+            height: 100%;
+        }
       }
 
       .swiper-wrapper {
           @include md {
+            height: 60vh;
+          }
+
+          @include sm {
             height: 68vh;
           }
       }
@@ -605,13 +696,14 @@ header {
         }
 
         p {
-            width: 70%;
+            //width: 70%;
             font-weight: 500;
             font-size: 1.625rem;
             line-height: 130%;
             user-select: none;
-            padding-right: 2rem;
+            padding-right: 3rem;
             width: 100%;
+            white-space: pre-line;
 
             @include md {
                 padding-right: 0;
@@ -638,8 +730,12 @@ header {
         }
 
         .button-secondary {
-            width: 15.5rem;
+            width: 20rem;
             margin: 2.5rem auto 0;
+
+            @include md {
+                width: 15.5rem;
+            }
         }
 
         @include md {
@@ -676,13 +772,17 @@ header {
 }
 
 .contact {
-    height: 92vh;
+    height: 90vh;
+
+    @include md {
+        height: 84vh;
+    }
 
     .contact__content {
         background-color: $white;
         height: 100vh;
         display: flex;
-        padding: 8rem 8rem;
+        padding: 8rem auto;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -697,31 +797,86 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
 
-        .underline {
+        .contact__title--text-01{
+            display: block;
+            margin-right: 1vh;
+        }
+        .contact__title--text-02{
+            display: block;
+            margin-right: 1vh;
+        }
+        .contact__title--text-03{
+            display: block;
+            margin-right: 1vh;
+        }
+        
+        .contact__title--text-04 {
+            display: block;
+            font-size: 7vh;
+            font-weight: 900;
+        }
+        
+
+        .contact__title--underline {
+            @include underline;
             background-color: $secondary;
-            width: 16.5vh;
+            width: 0;
             margin-left: 0rem;
             position: absolute;
             display: inline-block;
-            top: 5.5vh;
-            // left: 15px;
+            top: 7vh;
             z-index: 9;
+
+            @include md {
+                top: 11.4vh;
+                display: block;
+            }
         }
         
         .mix-line {
-            display: inline-block;
+            display: flex;
             position: relative;
-            margin-top: -1.2rem;
-    
-            h1, h2, a {
-                display: inline;
-                margin: 0 0.2rem;
-                transition: 0.2s ease-out;
+            margin-top: -2.3vh;
+            align-items: baseline;
+
+            // display: flex;
+            // position: relative;
+            // margin-top: -1.5vh;
+            // align-items: baseline;
+
+            @include md {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: -0.4vh;
             }
+    
+            h1 {
+                display: inline;
+                position: relative;
+                z-index: 10;
+
+                
+            }
+
+            h2 {
+                display: inline;
+            }
+
+            a {
+                display: inline;
+                transition: 0.2s ease-out;
+
+                @include md {
+                    display: block;
+                    margin-top: -1.5vh;
+                }
+            }
+
             a:hover {
                 display: inline;
-                margin: 0 0.2rem;
                 color: $primary;
             }
         }
@@ -741,6 +896,15 @@ footer {
     align-items: center;
     padding: 2rem 4rem;
     position: relative;
+
+    @include md {
+        flex-direction: column-reverse;
+        justify-content: center;
+
+        .footer__social {
+            margin-bottom: 1rem;
+        }
+    }
 
     ul {
         display: flex;
