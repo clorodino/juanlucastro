@@ -678,12 +678,16 @@ header {
 
 .about {
 
+    background-color: $white;
+    
     .about__content {
         background-color: $white;
         //height: 100vh;
         display: flex;
-        padding: 8rem 8rem 4rem;
         flex-direction: column;
+        padding: 8rem 8rem 4rem;
+        margin: 0 auto;
+        max-width: 1280px;
 
         .about__text-content {
             display: flex;
@@ -734,7 +738,7 @@ header {
             margin: 2.5rem auto 0;
 
             @include md {
-                width: 15.5rem;
+                width: 19.5rem;
             }
         }
 

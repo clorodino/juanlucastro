@@ -919,16 +919,22 @@ header nav .header__menu--toggle {
 }
 
 /* ABOUT */
+.about {
+  background-color: #fff7ed;
+}
+
 .about .about__content {
   background-color: #fff7ed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 8rem 8rem 4rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 8rem 8rem 4rem;
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
 .about .about__content .about__text-content {
@@ -999,7 +1005,7 @@ header nav .header__menu--toggle {
 
 @media (max-width: 768px) {
   .about .about__content .button-secondary {
-    width: 15.5rem;
+    width: 19.5rem;
   }
 }
 
