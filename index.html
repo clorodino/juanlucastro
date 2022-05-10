@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
     <script src="https://kit.fontawesome.com/e5612c4556.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js" defer></script>
@@ -15,11 +17,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.3/lottie.min.js" integrity="sha512-e0f5QhAghpnR7F96ocZHSXHNrM1ugw32mmQJsKg02ADeVj7uxFkG5UA+HgrcTTxcPWp415lH+1l1b4nZtyqnsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script defer src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script defer src="./js/jquery.jfMagnify.min.js"></script>
+    <script defer src="/js/jquery.ui.touch-punch.min.js"></script>
+    
+
+
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script defer type='module' src="./js/animation.js"></script>
-    <script defer type='module' src="./js/script.js"></script>
+    <script defer type='module' src="./js/magnifier.js"></script>
+    <script defer type='module' src="./js/menu.js"></script>
 </head>
 <body>
+
+    <a href="#home">
+        <div class="button-top"><span class="material-symbols-outlined">
+            expand_less
+            </span>
+        </div>
+    </a>
 
     <!-- HEADER -->
 
@@ -39,20 +57,31 @@
                     <div class="mask"><li><a href="#contact">Contact</a></li></div>
                 </ul>
             </div>
+            <div class="header__menu--responsive">
+                <ul>
+                    <div class="mask"><li><a class="button-menu" href="#projects">Projects</a></li></div>
+                    <div class="mask"><li><a class="button-menu" href="#about">About</a></li></div>
+                    <div class="mask"><li><a class="button-menu" href="#contact">Contact</a></li></div>
+                </ul>
+            </div>
             <div class="header__menu--toggle">
-                <!-- <i id="toggleBtn" class="fa-solid fa-bars"></i> -->
                 <lottie-player class="burger" src="./assets/img/burger.json" background="transparent" speed="1"></lottie-player>
+            </div>
+            <div class="header__menu--toggle-responsive">
+                <lottie-player class="burger-mobile" src="./assets/img/burger.json" background="transparent" speed="1"></lottie-player>
             </div>
             
         </nav>
     </header>
 
+    <!-- <button class="button-test" style="padding: 10px; border-radius: 15px; background:tomato; color: white; position: absolute; top: 150px; right: 50px;">ocultar menu</button> -->
+
     <!-- HOME -->
 
-    <section id="home" class="home section-content">
+    <section id="home" class="panel home section-content">
         <div class="home__content">
             <div class="home__illustration">
-                <img src="./assets/img/face_illustration.svg" alt="face">
+                <img src="./assets/img/home-image.svg" alt="face">
             </div>
             <div class="home__title">
                 <h2 class="mask">
@@ -73,7 +102,7 @@
 
     <!-- FRONT-END -->
 
-    <section class="front-end section-content">
+    <section class="panel front-end section-content">
         <div class="front-end__content">
             <div class="front-end__buttons">
                 <ul>
@@ -93,50 +122,67 @@
 
     <!-- DESIGN -->
 
-    <section class="design section-content">
+    <section class="panel design section-content">
         <div class="design__content">
-            <div class="design__title">
-                <h2 class="mask">
-                    <span class="design__title--text-01">with strong</span>
-                </h2>
-                <h2 class="mix-line mask">
-                    <div class="bolder">
-                        <span class="design__title--underline"></span>
-                        <span class="design__title--text-02">design </span>
-                    </div>
-                    <span class="design__title--text-03">skills</span>
-                </h2>
-            </div>
+
+            
             <div class="boxes-mask">
                 <div class="box1"></div>
                 <div class="box2"></div>
             </div>
-            <div class="semicircles">
+        
+            <div class="mask-semicircles mask">
+
+                <div class="container">
+
+                    <div class="semicircles">
+            
+                        <div class="">
+                            <div class="semicircle-top-01"></div>
+                            <div class="semicircle-bottom-01"></div>
+                        </div>
+                        <div class="">
+                            <div class="semicircle-top-02"></div>
+                            <div class="semicircle-bottom-02"></div>
+                        </div>
+                        <div class="">
+                            <div class="semicircle-top-03"></div>
+                            <div class="semicircle-bottom-03"></div>
+                        </div>
+                    </div>
+                    <div class="circles">
+                        <div class="circle01 circle"></div>
+                        <div class="circle02 circle"></div>
+                        <div class="circle03 circle"></div>
+                    </div>
+        
+                    <div class="design__title-container">
+                        <div class="design__title">
+                            <h2 class="mask">
+                                <span class="design__title--text-01">with strong</span>
+                            </h2>
+                            <h2 class="mix-line mask">
+                                <div class="bolder">
+                                    <span class="design__title--underline"></span>
+                                    <span class="design__title--text-02">design </span>
+                                </div>
+                                <span class="design__title--text-03">skills</span>
+                            </h2>
+                        </div>
+                    </div>
     
-                <div class="">
-                    <div class="semicircle-top-01"></div>
-                    <div class="semicircle-bottom-01"></div>
                 </div>
-                <div class="">
-                    <div class="semicircle-top-02"></div>
-                    <div class="semicircle-bottom-02"></div>
-                </div>
-                <div class="">
-                    <div class="semicircle-top-03"></div>
-                    <div class="semicircle-bottom-03"></div>
-                </div>
+
             </div>
-            <div class="circles">
-                <div class="circle01 circle"></div>
-                <div class="circle02 circle"></div>
-                <div class="circle03 circle"></div>
-            </div>
+            
+
+
         </div>
     </section>
 
     <!-- ANIMATION -->
 
-    <section class="animation section-content">
+    <section class="panel animation section-content">
         <div class="animation__content">
             <div class="animation__lottie">
                 <!-- <lottie-player src="./assets/img/animation-animation.json" background="transparent" speed="1" autoplay></lottie-player> -->
@@ -161,9 +207,27 @@
 
     <!-- DETAILS -->
 
-    <section class="details section-content">
+    <section class="panel details section-content">
         <div class="details__content">
-            <div class="details__title">
+
+            <div class="magnify">
+                <div class="magnify_glass"></div>
+                <div class="element_to_magnify">
+            
+                    <div class="details__title--static ">
+                        <h2 class="mix-line--static mask">
+                            <span class="details__title--text-01--static">and </span>
+                            <div class="bolder">
+                                <span class="details__title--underline--static"></span>
+                                <span class="details__title--text-02--static">details</span>
+                            </div>
+                            <span class="details__title--point--static"><img src="./assets/img/point_face.svg" alt="face"></span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details__title ">
                 <h2 class="mix-line mask">
                     <span class="details__title--text-01">and </span>
                     <div class="bolder">
@@ -173,12 +237,16 @@
                     <span class="details__title--point"><img src="./assets/img/point_face.svg" alt="face"></span>
                 </h2>
             </div>
+
+            
+
+            
         </div>
     </section>
 
     <!-- PROJECTS -->
 
-    <section id="projects" class="projects section-content">
+    <section id="projects" class="panel projects section-content">
         <div class="projects__content">
             <h1 class="projects__title title">Last Projects</h1>
             <div class="projects__cards swiper mySwiper">
@@ -212,14 +280,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-scrollbar"></div>
+                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-scrollbar"></div> -->
             </div>
         </div>
     </section>
 
     <!-- ABOUT -->
 
-    <section id="about" class="about">
+    <section id="about" class="panel about">
         <div class="about__content">
             <h1 class="about__title title">About</h1>
             <div class="about__text-content">
@@ -276,7 +345,7 @@
     
     <!-- CONTACT -->
 
-    <section id="contact" class="contact">
+    <section id="contact" class="panel contact">
         <div class="contact__content">
             <div class="contact__illustration">
                 <img src="./assets/img/point_face.svg" alt="">
@@ -304,21 +373,21 @@
 
             </div>
         </div>
-        <div class="contact__gradient"></div>
+        <!-- <div class="contact__gradient"></div> -->
     </section>
 
     <!-- FOOTER -->
 
     <footer class="footer">
-        <div class="footer__copyright">Copyright © 2021 Juan Luis Castro</div>
-        <div class="footer__social">
-            <ul>
-                <li><a href="http://github.com/clorodino"> <i class="fa-brands fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/juanluiscastromaldonado/"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://www.instagram.com/clorodino"><i class="fa-brands fa-instagram"></i></a></li>
-            </ul>
+        <div class="footer__content">
+            <div class="footer__copyright">Copyright © 2022 Juan Luis Castro</div>
+            <div class="footer__social">
+                <ul>
+                    <li><a href="http://github.com/clorodino" target="blank"> <i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/juanluiscastromaldonado/" target="blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
-
 </body>
 </html>
