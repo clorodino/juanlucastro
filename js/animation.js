@@ -1,144 +1,127 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
-
-// HOME 
+// HOME
 
 const homeTl = gsap.timeline({
-    scrollTrigger: {
+	scrollTrigger: {
 		trigger: '.home',
-        start: "80% bottom",
-		// markers: false,
+		start: '80% bottom',
 	},
 })
 
-homeTl.from('.home__title--text-01', { delay: 0.5, duration: 1, y: '100vh', ease: 'power3.out' }, '<-0.5')
-    .from('.home__title--text-02', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2' )
-    .from('.home__title--text-03', { duration: 1, y: '100vh', ease: 'power3.out', }, '<.2' )
-    .to('.home__title--underline', { duration: 1, width: '22vh', ease: 'power2.inOut', }, '>' )
-
+homeTl
+	.from('.home__title--text-01', { delay: 0.5, duration: 1, y: '100vh', ease: 'power3.out' }, '<-0.5')
+	.from('.home__title--text-02', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2')
+	.from('.home__title--text-03', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2')
+	.to('.home__title--underline', { duration: 1, width: '22vh', ease: 'power2.inOut' }, '>')
 
 // FRONT-END
 
-    // Console Date
+// Console Date
 
-    const date = new Date()
+const date = new Date()
 
-    const localeDate = `${date.toDateString()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
-    const time = document.getElementById('time')
-    const newNode = document.createElement('span')
-    newNode.appendChild(document.createTextNode(`${localeDate}`))
-    time.appendChild(newNode)
+const localeDate = `${date.toDateString()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+const time = document.getElementById('time')
+const newNode = document.createElement('span')
+newNode.appendChild(document.createTextNode(`${localeDate}`))
+time.appendChild(newNode)
 
-    gsap.to('.cursor', { opacity: 0, ease: 'power4.inOut', repeat: -1 })
+gsap.to('.cursor', { opacity: 0, ease: 'power4.inOut', repeat: -1 })
 
-    gsap.to('.typewriter', {
-        // scrollTrigger: {
-        // 	trigger: '#front-end',
-        // 	start: '85% bottom',
-        // 	markers: true,
-        // },
-        duration: 1.5,
-        text: "I'm a Front-End Developer",
-    })
-        .repeat(-1)
-        .repeatDelay(2)
-        .yoyo(true)
+gsap.to('.typewriter', {
+	scrollTrigger: {
+		trigger: '.front-end',
+		start: '85% bottom',
+	},
+	duration: 1.5,
+	text: "I'm a Front-End Developer",
+})
+	.repeat(-1)
+	.repeatDelay(2)
+	.yoyo(true)
 
-
-
-// DESIGN 
+// DESIGN
 
 const semiCirclesTl = gsap.timeline({
 	scrollTrigger: {
 		trigger: '.design',
-        start: "80% bottom",
+		start: '80% bottom',
 		markers: false,
 	},
 })
 
 semiCirclesTl
-    .from(".boxes-mask", 1.2, { transformOrigin: "0 0", scaleY:0, ease: 'power4.inOut'})
-    .from('.box2', { duration: .6, ease: 'power4.out', y: 100},'>-.3')
-    .from('.circle', {duration: 2, ease: 'power4.inOut', y: '100vh', stagger: 0.3}, '>-1')
-    .from('.semicircles', {duration: 0.01, opacity: 0, display: 'none' },'>')
-   .to('.circle', {duration: 0, opacity: 0, display: 'none', delay: 0.5 })
-    .to('.semicircle-top-01', {duration: 0.8, ease: 'power4.inOut', x: '-50%'})
-    .to('.semicircle-bottom-01', {duration: 0.8, ease: 'power4.inOut', x: '50%'}, '<')
-    .to('.semicircle-top-02', {duration: 0.8, ease: 'power4.inOut', x: '-50%'}, "-=0.75")
-    .to('.semicircle-bottom-02', {duration: 0.8, ease: 'power4.inOut', x: '50%'}, '<')
-    .to('.semicircle-top-03', {duration: 0.8, ease: 'power4.inOut', x: '-50%'}, "-=0.75")
-    .to('.semicircle-bottom-03', {duration: 0.8, ease: 'power4.inOut', x: '50%'}, '<')
-
-// const designTL = gsap.timeline()
-// designTL
-.from('.design__title--text-01', { delay: 0.5, duration: 1, y: '100vh', ease: 'power3.out' }, '<-0.5')
-.from('.design__title--text-02', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2' )
-.from('.design__title--text-03', { duration: 1, y: '100vh', ease: 'power3.out', }, '<.2' )
-.to('.design__title--underline', { duration: 1, width: '21.3vh', ease: 'power2.inOut', }, '>' )
-
+	.from('.boxes-mask', 1.2, { transformOrigin: '0 0', scaleY: 0, ease: 'power4.inOut' })
+	.from('.box2', { duration: 0.6, ease: 'power4.out', y: 100 }, '>-.3')
+	.from('.circle', { duration: 2, ease: 'power4.inOut', y: '100vh', stagger: 0.3 }, '>-1')
+	.from('.semicircles', { duration: 0.01, opacity: 0, display: 'none' }, '>')
+	.to('.circle', { duration: 0, opacity: 0, display: 'none', delay: 0.5 })
+	.to('.semicircle-top-01', { duration: 0.8, ease: 'power4.inOut', x: '-50%' })
+	.to('.semicircle-bottom-01', { duration: 0.8, ease: 'power4.inOut', x: '50%' }, '<')
+	.to('.semicircle-top-02', { duration: 0.8, ease: 'power4.inOut', x: '-50%' }, '-=0.75')
+	.to('.semicircle-bottom-02', { duration: 0.8, ease: 'power4.inOut', x: '50%' }, '<')
+	.to('.semicircle-top-03', { duration: 0.8, ease: 'power4.inOut', x: '-50%' }, '-=0.75')
+	.to('.semicircle-bottom-03', { duration: 0.8, ease: 'power4.inOut', x: '50%' }, '<')
+	.from('.design__title--text-01', { delay: 0.5, duration: 1, y: '100vh', ease: 'power3.out' }, '<-0.5')
+	.from('.design__title--text-02', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2')
+	.from('.design__title--text-03', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2')
+	.to('.design__title--underline', { duration: 1, width: '21.3vh', ease: 'power2.inOut' }, '>')
 
 // ANIMATION
 
 const animationTL = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.animation',
-        start: "80% bottom",
-        onEnter: () => lottieAnimation.play(),
-		// markers: false,
+	scrollTrigger: {
+		trigger: '.animation',
+		start: '80% bottom',
+		onEnter: () => lottieAnimation.play(),
 	},
 })
 
-animationTL.from('.animation__title--text-01', { delay: 0.5, duration: 1, y: '100vh', ease: 'power3.out' }, '<-0.5')
-.from('.animation__title--text-02', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2' )
-.to('.animation__title--underline', { duration: 1, width: '31.5vh', ease: 'power2.inOut', }, '>' )
+animationTL
+	.from('.animation__title--text-01', { delay: 0.5, duration: 1, y: '100vh', ease: 'power3.out' }, '<-0.5')
+	.from('.animation__title--text-02', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2')
+	.to('.animation__title--underline', { duration: 1, width: '31.5vh', ease: 'power2.inOut' }, '>')
 
+// lottie animation
 
-    // lottie animation
+const lottieAnimation = lottie.loadAnimation({
+	container: document.querySelector('.animation__lottie--container'),
+	renderer: 'svg',
+	loop: true,
+	autoplay: false,
+	path: './assets/img/animation-animation.json',
+})
 
-    const lottieAnimation = lottie.loadAnimation({
-        container: document.querySelector('.animation__lottie--container'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: false,
-        path: './assets/img/animation-animation.json'
-    })
-    lottieAnimation.playSegments([150,214],false)
-
-    lottieAnimation.pause()
-
+lottieAnimation.playSegments([150, 214], false)
+lottieAnimation.pause()
 
 // DETAILS
 
 const detailsTL = gsap.timeline({
-    scrollTrigger: {
+	scrollTrigger: {
 		trigger: '.details',
-        start: "80% bottom",
-		// markers: true,
+		start: '80% bottom',
 	},
 })
 
-detailsTL.from('.details__title--text-01', { delay: 0.5, duration: 1, y: '100vh', ease: 'power3.out' }, '<-0.5')
-.from('.details__title--text-02', { duration: 1, y: '100vh', ease: 'power3.out'}, '<.2' )
-.from('.details__title--point', { duration: 1, y: '100vh', ease: 'power3.out' }, '<' )
-.from('.details__title--underline', { duration: 1, width: 0, ease: 'power2.inOut', }, '>' )
-.to('.details__title', {duration: 1.2, display: 'none', opacity: 0, ease: 'power1.out'})
-
-// .to('.details__title--text-02', {clearProps: 'font-size'})
-// .to('.details__title--text-02', {display: 'inline'})
-
+detailsTL
+	.from('.details__title--text-01', { delay: 0.5, duration: 1, y: '100vh', ease: 'power3.out' }, '<-0.5')
+	.from('.details__title--text-02', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2')
+	.from('.details__title--point', { duration: 1, y: '100vh', ease: 'power3.out' }, '<')
+	.from('.details__title--underline', { duration: 1, width: 0, ease: 'power2.inOut' }, '>')
+	.to('.details__title', { duration: 1.2, display: 'none', opacity: 0, ease: 'power1.out' })
 
 // PROJECTS
 
-const swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    scrollbar: {
-        el: ".swiper-pagination",
-        // el: ".swiper-scrollbar",
-        draggable: true,
-    }
-    })
-
+const swiper = new Swiper('.mySwiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 30,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+})
 
 // ABOUT
 
@@ -156,24 +139,21 @@ gsap.to('.tech-list', {
 	rotation: 0.01,
 })
 
-
 // CONTACT
 
 const contactTL = gsap.timeline({
-    scrollTrigger: {
+	scrollTrigger: {
 		trigger: '.contact',
-        start: "80% bottom",
-		// markers: true,
+		start: '80% bottom',
 	},
 })
 
-contactTL.from('.contact__title--text-01', { delay: 0.5, duration: 1, y: '100vh', ease: 'power3.out' }, '<-0.5')
-.from('.contact__title--text-02', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2' )
-.from('.contact__title--text-03', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2' )
-.from('.contact__title--text-04', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2' )
-.to('.contact__title--underline', { duration: 1, width: '20.5vh', ease: 'power2.inOut', }, '>' )
-
-
+contactTL
+	.from('.contact__title--text-01', { delay: 0.5, duration: 1, y: '100vh', ease: 'power3.out' }, '<-0.5')
+	.from('.contact__title--text-02', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2')
+	.from('.contact__title--text-03', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2')
+	.from('.contact__title--text-04', { duration: 1, y: '100vh', ease: 'power3.out' }, '<.2')
+	.to('.contact__title--underline', { duration: 1, width: '20.5vh', ease: 'power2.inOut' }, '>')
 
 // Jump to section
 

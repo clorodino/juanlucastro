@@ -65,7 +65,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Disable main text tags */
 a {
   font-size: 16px;
   font-weight: 400;
@@ -154,10 +153,6 @@ body {
 
 .bg-terciary {
   background-color: #ffdc55;
-}
-
-.bold {
-  font-weight: 900;
 }
 
 .button-top {
@@ -275,10 +270,6 @@ body {
   color: #343434;
   -webkit-transform: translate(0, -0.2rem);
           transform: translate(0, -0.2rem);
-}
-
-.about__text-content p {
-  white-space: pre-line;
 }
 
 /* HEADER */
@@ -496,12 +487,12 @@ header nav .header__menu--toggle-responsive {
 .home__illustration {
   height: 12rem;
   width: 21rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 @media (max-width: 768px) {
   .home__illustration {
-    margin: 1.6rem 0;
+    margin: 0.5rem 0;
     width: 19rem;
   }
 }
@@ -598,7 +589,7 @@ header nav .header__menu--toggle-responsive {
 }
 
 .front-end__title {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* DESIGN */
@@ -1145,22 +1136,6 @@ header nav .header__menu--toggle-responsive {
 }
 
 /* PROJECTS */
-.projects {
-  /* .swiper-horizontal>.swiper-scrollbar {
-        width: 87%;
-        left: 0;
-
-        @include sm {
-            width: 100%;
-            
-        }
-    }
-    .swiper-scrollbar-drag {
-        width: 89%;
-        background: $primary;
-    } */
-}
-
 .projects .projects__content {
   background-color: #fff7ed;
   height: 100vh;
@@ -1179,27 +1154,6 @@ header nav .header__menu--toggle-responsive {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.projects .projects__content .projects__cards .card {
-  border-radius: 1.25rem;
-  padding: 3.6rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  .projects .projects__content .projects__cards .card {
-    padding: 2.5rem;
-  }
 }
 
 .projects .projects__content .projects__cards .buttons-content {
@@ -1266,7 +1220,7 @@ header nav .header__menu--toggle-responsive {
 
 .projects .swiper {
   width: 100%;
-  height: 83%;
+  height: 93%;
 }
 
 @media (max-width: 768px) {
@@ -1283,8 +1237,34 @@ header nav .header__menu--toggle-responsive {
 
 .projects .swiper-slide {
   width: 33rem;
-  height: 46.625rem;
+  height: 100%;
   border-radius: 25px;
+  padding: 3.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.projects .swiper-slide .bold {
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.projects .swiper-slide .italic {
+  font-style: italic;
+  font-weight: 800;
+}
+
+.projects .swiper-slide p {
+  white-space: pre-line;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -1298,18 +1278,23 @@ header nav .header__menu--toggle-responsive {
   .projects .swiper-slide {
     width: 100%;
     height: 100%;
+    padding: 2.5rem;
   }
+}
+
+.projects .swiper-wrapper {
+  height: 93%;
 }
 
 @media (max-width: 768px) {
   .projects .swiper-wrapper {
-    height: 60vh;
+    height: 100%;
   }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .projects .swiper-wrapper {
-    height: 68vh;
+    height: 90%;
   }
 }
 
@@ -1341,7 +1326,7 @@ header nav .header__menu--toggle-responsive {
           align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about .about__content .about__text-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1366,6 +1351,12 @@ header nav .header__menu--toggle-responsive {
   white-space: pre-line;
 }
 
+@media (max-width: 1024px) {
+  .about .about__content p {
+    margin-bottom: 2.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .about .about__content p {
     padding-right: 0;
@@ -1374,11 +1365,11 @@ header nav .header__menu--toggle-responsive {
   }
 }
 
-.about .about__content .about__illustration img {
+.about .about__content .about__illustration lottie-player {
   width: 16.25rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about .about__content .about__illustration {
     width: 100%;
     display: -webkit-box;
@@ -1413,10 +1404,20 @@ header nav .header__menu--toggle-responsive {
   }
 }
 
+.about .about__text-content p {
+  white-space: pre-line;
+}
+
+.about .about__text-content p br {
+  content: "";
+  margin: -1rem;
+  display: block;
+}
+
 .about .about__technologies {
   background-color: #ffdc55;
   font-weight: 700;
-  font-size: 3.125rem;
+  font-size: 2rem;
   padding: 1.5rem 0;
   overflow: hidden;
   white-space: nowrap;
@@ -1433,7 +1434,7 @@ header nav .header__menu--toggle-responsive {
 
 @media (max-width: 768px) {
   .about .about__technologies {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 1rem 0;
   }
 }
