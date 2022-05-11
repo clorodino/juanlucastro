@@ -334,8 +334,18 @@ header {
 
     h2 {
         font-family: 'Roboto Mono', monospace;
-        font-size: 3rem;
+        font-size: 3.2rem;
         font-weight: 400;
+    }
+
+    .front-end__info {
+        font-size: 2.4rem;
+        font-weight: 200;
+        color: $secondary;
+    }
+    
+    .front-end__title {
+        font-weight: 600;
     }
 
     @include md {
@@ -343,14 +353,22 @@ header {
         padding: 1rem;
 
         h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
+        }
+
+        .front-end__info {
+            font-size: 1.8rem;
         }
     }
 
     @include sm {
 
         h2 {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
+        }
+
+        .front-end__info {
+            font-size: 1.4rem;
         }
     }
 }
@@ -379,14 +397,14 @@ header {
     @include windowButton();
 }
 
-.front-end__info {
-    font-weight: 200;
-    color: $secondary;
-}
+// .front-end__info {
+//     font-weight: 200;
+//     color: $secondary;
+// }
 
-.front-end__title {
-    font-weight: 400;
-}
+// .front-end__title {
+//     font-weight: 400;
+// }
 
 
 /* DESIGN */

@@ -526,8 +526,18 @@ header nav .header__menu--toggle-responsive {
 
 .front-end__content h2 {
   font-family: 'Roboto Mono', monospace;
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 400;
+}
+
+.front-end__content .front-end__info {
+  font-size: 2.4rem;
+  font-weight: 200;
+  color: #ff6f42;
+}
+
+.front-end__content .front-end__title {
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
@@ -536,13 +546,19 @@ header nav .header__menu--toggle-responsive {
     padding: 1rem;
   }
   .front-end__content h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+  .front-end__content .front-end__info {
+    font-size: 1.8rem;
   }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .front-end__content h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+  }
+  .front-end__content .front-end__info {
+    font-size: 1.4rem;
   }
 }
 
@@ -581,15 +597,6 @@ header nav .header__menu--toggle-responsive {
   height: 1.2rem;
   border-radius: 50%;
   margin-right: 0.8rem;
-}
-
-.front-end__info {
-  font-weight: 200;
-  color: #ff6f42;
-}
-
-.front-end__title {
-  font-weight: 400;
 }
 
 /* DESIGN */
