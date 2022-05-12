@@ -20,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EasePack.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
     <!-- lottie -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script> -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.3/lottie.min.js" integrity="sha512-e0f5QhAghpnR7F96ocZHSXHNrM1ugw32mmQJsKg02ADeVj7uxFkG5UA+HgrcTTxcPWp415lH+1l1b4nZtyqnsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- magnify -->
     <script defer src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -49,34 +49,44 @@
 
     <header class="header">
         <nav>
-            <div class="header__logo">
-                <a href="#home">
-                    <lottie-player src="./assets/img/jc_logo.json" background="transparent" speed="1"
-                        loop autoplay
-                        ></lottie-player>
-                </a>
-            </div>
+            <a href="#home">
+                <div class="header__logo"></div>
+            </a>
             <div class="header__menu">
                 <ul>
-                    <div class="mask"><li><a href="#projects">Projects</a></li></div>
-                    <div class="mask"><li><a href="#about">About</a></li></div>
-                    <div class="mask"><li><a href="#contact">Contact</a></li></div>
+                    <div class="mask">
+                        <li><a href="#projects">Projects</a></li>
+                    </div>
+                    <div class="mask">
+                        <li><a href="#about">About</a></li>
+                    </div>
+                    <div class="mask">
+                        <li><a href="#contact">Contact</a></li>
+                    </div>
                 </ul>
             </div>
             <div class="header__menu--responsive">
                 <ul>
-                    <div class="mask"><li><a class="button-menu" href="#projects">Projects</a></li></div>
-                    <div class="mask"><li><a class="button-menu" href="#about">About</a></li></div>
-                    <div class="mask"><li><a class="button-menu" href="#contact">Contact</a></li></div>
+                    <div class="mask">
+                        <li><a class="button-menu" href="#projects">Projects</a></li>
+                    </div>
+                    <div class="mask">
+                        <li><a class="button-menu" href="#about">About</a></li>
+                    </div>
+                    <div class="mask">
+                        <li><a class="button-menu" href="#contact">Contact</a></li>
+                    </div>
                 </ul>
             </div>
             <div class="header__menu--toggle">
-                <lottie-player class="burger" src="./assets/img/burger.json" background="transparent" speed="1"></lottie-player>
+                <lottie-player class="burger" src="./assets/img/burger.json" background="transparent" speed="1">
+                </lottie-player>
             </div>
             <div class="header__menu--toggle-responsive">
-                <lottie-player class="burger-mobile" src="./assets/img/burger.json" background="transparent" speed="1"></lottie-player>
+                <lottie-player class="burger-mobile" src="./assets/img/burger.json" background="transparent" speed="1">
+                </lottie-player>
             </div>
-            
+    
         </nav>
     </header>
 
@@ -85,11 +95,7 @@
 
     <section id="home" class="panel home section-content">
         <div class="home__content">
-            <div class="home__illustration">
-                <lottie-player src="./assets/img/home-animation.json" background="transparent" speed="1"
-                        loop autoplay
-                        ></lottie-player>
-            </div>
+            <div class="home__illustration"></div>
             <div class="home__title">
                 <h2 class="mask">
                     <span class="home__title--text-01">
@@ -242,8 +248,8 @@
                     <div class="card swiper-slide bg-secondary">
                         <div>
                             <p><span class="bold">Graf Cómic</span> </p>
-                            <p>Mobile web app lets you keep up to date with everything that happens at Graf (Self-publishing festival based in Barcelona). </p>
-                            <p>You can choose one item in the menu panel, like activities, workshops, etc., and it shows all the related info about the section</p>
+                            <p>Mobile web app for Graf (Self-publishing festival based in Barcelona). </p>
+                            <p>You can choose one item in the menu panel (activities, workshops, etc.), and it shows all the related info about the section.</p>
                             <p>Build with <span class="italic"> NextJs, Javascript, MongoDb, Express, Mongoose, Html, Css</span> and <span class="italic">Tailwind.</span> </p>
                         </div>
                         <div class="buttons-content">

@@ -2,6 +2,16 @@ gsap.registerPlugin(ScrollTrigger)
 
 // HOME
 
+const homeAnimation = lottie.loadAnimation({
+    container: document.querySelector('.home__illustration'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+    path: './assets/img/home-animation.json',
+})
+
+homeAnimation.play()
+
 const homeTl = gsap.timeline({
 	scrollTrigger: {
 		trigger: '.home',

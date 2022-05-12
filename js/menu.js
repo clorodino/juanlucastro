@@ -30,6 +30,20 @@ menuResponsiveTl
 		'<0.3'
 	)
 
+
+// Logo Menu
+
+const logoAnimation = lottie.loadAnimation({
+    container: document.querySelector('.header__logo'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+    path: './assets/img/jc_logo.json',
+})
+
+logoAnimation.play()
+
+
 // Top Button
 
 const buttonTop = gsap.timeline({
