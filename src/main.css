@@ -139,7 +139,6 @@ html {
 .section-content {
   height: 100vh;
   overflow: hidden;
-  background-color: #fff7ed;
 }
 
 .mask {
@@ -1151,13 +1150,8 @@ header nav .header__menu--toggle-responsive {
 }
 
 /* PROJECTS */
-.projects {
-  display: contents;
-}
-
 .projects .projects__content {
   background-color: #fff7ed;
-  height: 1072px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1237,27 +1231,8 @@ header nav .header__menu--toggle-responsive {
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .projects .projects__content {
-    height: 970px;
-  }
-}
-
 .projects .swiper {
   width: 100%;
-  height: 93%;
-}
-
-@media (max-width: 768px) {
-  .projects .swiper {
-    height: 73%;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  .projects .swiper {
-    height: 100%;
-  }
 }
 
 .projects .swiper-slide {
@@ -1295,37 +1270,18 @@ header nav .header__menu--toggle-responsive {
 @media (max-width: 768px) {
   .projects .swiper-slide {
     width: 100%;
-    min-height: 35.75rem;
   }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .projects .swiper-slide {
     width: 100%;
-    min-height: 36.75rem;
     padding: 2.5rem;
   }
 }
 
 .projects .swiper-wrapper {
-  height: 43.75rem;
-}
-
-@media (max-width: 768px) {
-  .projects .swiper-wrapper {
-    height: 100%;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  .projects .swiper-wrapper {
-    height: 90%;
-  }
-}
-
-.projects .swiper-pagination {
-  top: 20px;
-  position: relative;
+  background-color: red;
 }
 
 /* ABOUT */

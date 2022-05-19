@@ -16,6 +16,7 @@ body {
 .section-content {
     height: 100vh;
     overflow: hidden;
+    background-color: $white;
 }
 
 .mask {
@@ -869,10 +870,12 @@ header {
 /* PROJECTS */
 
 .projects {
+    display:contents;
 
     .projects__content {
         background-color: $white;
-        height: 100vh;
+        // height: 100vh;
+        height: 1072px;
         display: flex;
         padding: 8rem 0 8rem 8rem;
         flex-direction: column;
@@ -923,10 +926,15 @@ header {
                 font-size: 2.5rem;
             }
         }
+
+        @include sm {
+            height: 970px;
+        }
     }
 
     .swiper {
         width: 100%;
+        // height: 1200px;
         height: 93%;
 
         @include md {
@@ -940,7 +948,8 @@ header {
 
     .swiper-slide {
         width: 33rem;
-        height: 100%;
+        // height: 1200px;
+        min-height: 43.75rem;
         border-radius: 25px;
         padding: 3.6rem;
         display: flex;
@@ -965,19 +974,21 @@ header {
 
         @include md {
             width: 100%;
-            height: 100%;
+            min-height: 35.75rem;
         }
 
         @include sm {
             width: 100%;
-            height: 100%;
+            min-height: 36.75rem;
             padding: 2.5rem;
         }
     }
 
     .swiper-wrapper {
 
-        height: 93%;
+        // height: 93%;
+        height: 43.75rem;
+        // height: 1200px;
 
         @include md {
             height: 100%;
@@ -986,6 +997,11 @@ header {
         @include sm {
             height: 90%;
         }
+    }
+
+    .swiper-pagination{
+        top: 20px;
+        position: relative;
     }
 }
 
