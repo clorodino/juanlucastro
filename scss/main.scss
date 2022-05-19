@@ -870,8 +870,9 @@ header {
 /* PROJECTS */
 
 .projects {
+    // display:contents;
     display:contents;
-
+    
     .projects__content {
         background-color: $white;
         // height: 100vh;
